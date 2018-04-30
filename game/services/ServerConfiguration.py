@@ -6,7 +6,7 @@ class ServerConfiguration:
         windows_path = "C://Users//joeye//Documents//"
         mac_path = "/tmp/"
         server_ip = '45.20.80.26'
-        local_ip = 'localhost'
+        local_ip = '0.0.0.0'
 
         self.isogram_server = isogram_server
 
