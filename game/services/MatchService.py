@@ -41,6 +41,7 @@ class MatchService:
             if pid not in self.looking_for_match.keys():
                 # This player just got placed in some other match. Nice
                 continue
+            print("I see the pid")
             profile = self.looking_for_match[pid]["profile"]
             desired_matches = self.looking_for_match[pid]["desired_matches"]
             sorted_matches = sorted(desired_matches, key=self.get_queue_priority)
@@ -52,9 +53,11 @@ class MatchService:
                 continue
 
             match_found = False
+            print("Need to find a match")
 
             # New match loop
             for match_type in sorted_matches:
+                print(match_type, "Type")
                 # This is the most preferred match type for this player
                 # Let's see if they can do it and/or if we can find someone else to do it with them.
                 game_setup = copy.deepcopy(self.match_types[match_type])
