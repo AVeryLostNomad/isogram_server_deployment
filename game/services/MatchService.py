@@ -64,6 +64,7 @@ class MatchService:
                 # Maybe is an instance copy of the type of game-mode we want to play?
 
                 if not game_setup.is_suitable_player(pid):
+                    print("Not suitable")
                     continue
                 # This match type works for this player, can we find other ones that it works for?
 
@@ -74,6 +75,7 @@ class MatchService:
                 start_time = time.time()
                 while (len(temp_players) != game_setup.get_desired_number_of_players()) and ((time.time() - start_time)
                                                                                                  < 30):
+                    print("Trying to match")
                     for spid in self.looking_for_match.keys():
                         if spid == pid:
                             # this is the same person
@@ -90,6 +92,7 @@ class MatchService:
 
                 if len(temp_players) != game_setup.get_desired_number_of_players():
                     # Could not make game. Ignore attempt and continue on
+                    print("Couldn't make the game")
                     continue
 
                 # Hey! We found enough players! Very cool!
