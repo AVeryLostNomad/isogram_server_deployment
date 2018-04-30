@@ -1,4 +1,4 @@
-from BaseQuest import BaseQuest
+from game.npcs.questing.quests.BaseQuest import BaseQuest
 
 
 class FindWordTypeQuest(BaseQuest):

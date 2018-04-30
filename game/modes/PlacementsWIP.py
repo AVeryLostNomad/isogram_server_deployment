@@ -2,7 +2,7 @@ import util.game_util
 import math
 import time
 
-from BaseGame import BaseGame
+from game.modes.BaseGame import BaseGame
 
 
 class Placements(BaseGame):

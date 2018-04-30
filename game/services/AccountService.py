@@ -1,7 +1,6 @@
 import os.path, json, time
-from util.Logger import Logger
-from player.Profile import Profile
-
+from game.util.Logger import Logger
+from game.player.Profile import Profile
 
 class AccountService:
 

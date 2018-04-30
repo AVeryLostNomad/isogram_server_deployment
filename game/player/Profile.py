@@ -1,8 +1,8 @@
 import json
-from Theme import Theme
-from Avatar import Avatar
+from game.player.Theme import Theme
+from game.player.Avatar import Avatar
 import time
-import util.UsernameGenerator as UsernameGenerator
+import game.util.UsernameGenerator as UsernameGenerator
 
 
 class Profile:

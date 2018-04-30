@@ -1,7 +1,7 @@
 import time, os, json
 import unicodedata as unc
-from util.Logger import Logger
-from items.ItemCore import Inventory, ItemStack, ItemTemplate, DefaultTemplates
+from game.util.Logger import Logger
+from game.items.ItemCore import Inventory, ItemStack, ItemTemplate, DefaultTemplates
 
 
 class InventoryService:

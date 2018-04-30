@@ -2,7 +2,7 @@ import util.game_util
 import time
 import json
 
-from BaseGame import BaseGame
+from game.modes.BaseGame import BaseGame
 
 
 class Practice(BaseGame):

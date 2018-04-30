@@ -1,5 +1,5 @@
 import util.game_util, math, time
-from BaseGame import BaseGame
+from game.modes.BaseGame import BaseGame
 import numpy as np
 
 

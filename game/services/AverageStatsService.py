@@ -1,6 +1,6 @@
 import os, json
-from modes.Practice import Practice
-from modes.SimpleHead2HeadWIP import SimpleHead2Head
+from game.modes.Practice import Practice
+from game.modes.SimpleHead2HeadWIP import SimpleHead2Head
 
 class AverageStatsService:
 
