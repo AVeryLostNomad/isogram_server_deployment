@@ -5,19 +5,19 @@ import time
 
 from flask import Flask, request
 
-from services.AccountService import AccountService
-from services.AverageStatsService import AverageStatsService
-from modes.BaseGame import Move
-from services.MatchService import MatchService
-from services.PIDService import PIDService
-from services.ServerConfiguration import ServerConfiguration
-from services.VerificationService import VerificationService
-from services.MarqueService import MarqueService
-from services.RewardService import RewardService
-from services.ActivityService import ActivityService
-from services.Words import Words
-from util.Email import send_mail
-from services.InventoryService import InventoryService
+from game.services.AccountService import AccountService
+from game.services.AverageStatsService import AverageStatsService
+from game.modes.BaseGame import Move
+from game.services.MatchService import MatchService
+from game.services.PIDService import PIDService
+from game.services.ServerConfiguration import ServerConfiguration
+from game.services.VerificationService import VerificationService
+from game.services.MarqueService import MarqueService
+from game.services.RewardService import RewardService
+from game.services.ActivityService import ActivityService
+from game.services.Words import Words
+from game.util.Email import send_mail
+from game.services.InventoryService import InventoryService
 
 app = Flask(__name__)
 english_word_db = Words(do_print_debug=False)
