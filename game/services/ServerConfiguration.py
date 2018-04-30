@@ -12,7 +12,7 @@ class ServerConfiguration:
 
         self.ip = local_ip
         self.domain = self.ip + ":5000"
-        self.file_base = windows_path + "isogram//"
+        self.file_base =  "isogram/"
 
     def get_domain(self):
         return self.domain
