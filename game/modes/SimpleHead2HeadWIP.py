@@ -1,4 +1,4 @@
-import util.game_util, math, time
+import game.util.game_util, math, time
 from game.modes.BaseGame import BaseGame
 import numpy as np
 

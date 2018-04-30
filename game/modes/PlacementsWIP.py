@@ -1,4 +1,4 @@
-import util.game_util
+import game.util.game_util
 import math
 import time
 
