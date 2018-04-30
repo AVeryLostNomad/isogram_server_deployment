@@ -908,5 +908,4 @@ def use_item():
             }
         })
 
-if __name__ == '__main__':
-    app.run(host=server.get_server_configuration().ip, port=5000, debug=False)
+app.run(host=server.get_server_configuration().ip, port=8080, debug=False)
