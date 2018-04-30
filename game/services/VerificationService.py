@@ -1,5 +1,5 @@
 import json, os, random, string, time
-from util.Logger import Logger
+from game.util.Logger import Logger
 
 
 class VerificationService:

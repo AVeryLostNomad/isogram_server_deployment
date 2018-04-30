@@ -1,7 +1,7 @@
 import string
 import itertools
 import random
-import game_util
+import game.util.game_util
 
 initial_consonants = (set(string.ascii_lowercase) - set('aeiou')
                       # remove those easily confused with others

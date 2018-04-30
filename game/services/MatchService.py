@@ -1,8 +1,8 @@
-from modes.BaseGame import BaseGame
+from game.modes.BaseGame import BaseGame
 import copy, time, json
-from modes.Practice import Practice
-from modes.PlacementsWIP import Placements
-from modes.SimpleHead2HeadWIP import SimpleHead2Head
+from game.modes.Practice import Practice
+from game.modes.PlacementsWIP import Placements
+from game.modes.SimpleHead2HeadWIP import SimpleHead2Head
 
 class MatchService:
 

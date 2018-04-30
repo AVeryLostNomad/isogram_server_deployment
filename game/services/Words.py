@@ -1,4 +1,4 @@
-import util.game_util as game_util
+import game.util.game_util as game_util
 import os
 import random
 
