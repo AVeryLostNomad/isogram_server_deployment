@@ -113,8 +113,7 @@ class MatchService:
                 copy = game_setup.provide_copy()
                 print("Copy nulll? ", copy == None, type(copy))
                 game_setup = copy.initialize(self.isogram_server.get_match_service(), subsequent_load=True)
-                print("Copy nulll Two?? ", copy == None, type(copy))
-
+                print("Copy nulll Two?? ", game_setup == None, type(game_setup))
 
                 for player_id in temp_players:
                     print("Adding this player")
