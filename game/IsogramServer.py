@@ -22,7 +22,7 @@ from game.services.InventoryService import InventoryService
 app = Flask(__name__)
 english_word_db = Words(do_print_debug=False)
 
-version_string = "0.0.01"
+version_string = "0.0.02"
 
 print("Isogram Server v" + version_string)
 
