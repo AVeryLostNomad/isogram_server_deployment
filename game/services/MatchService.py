@@ -34,6 +34,10 @@ class MatchService:
     def get_matches(self):
         return self.matches
 
+    def provide_match_template(self, name):
+        print("Providing a match template for, ", name)
+        return self.match_types[name]
+
     def tick(self, tick_count):
         #  Go through all users in the looking for match.
         print("Ticking " + str(len(self.matches)) + " games and " + str(len(self.looking_for_match.keys())) + " players")
@@ -64,13 +68,7 @@ class MatchService:
                 # This is the most preferred match type for this player
                 # Let's see if they can do it and/or if we can find someone else to do it with them.
                 print('Match types has that? ', self.match_types.has_key(match_type))
-                try:
-                    cl_template = getattr(importlib.import_module("game.modes"), self.match_types[match_type].get_name())
-                    game_setup = cl_template(self)
-                except Exception, e:
-                    print(e)
-                    print("There was an exception")
-                # Maybe is an instance copy of the type of game-mode we want to play?
+                game_setup = self.provide_match_template(match_type) # The template for the gamemode
                 print("Copy done")
 
                 if not game_setup.is_suitable_player(pid):
@@ -112,7 +110,7 @@ class MatchService:
                 if str(pid) in self.guesstimated_wait_times.keys():
                     self.guesstimated_wait_times.pop(str(pid))
 
-                game_setup.initialize(self.isogram_server.get_match_service(), subsequent_load=True)
+                game_setup = game_setup.provide_copy().initialize(self.isogram_server.get_match_service(), subsequent_load=True)
 
                 for player_id in temp_players:
                     print("Adding this player")

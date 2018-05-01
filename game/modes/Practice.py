@@ -10,6 +10,9 @@ class Practice(BaseGame):
     def __init__(self, match_service):
         self.initialize(match_service)
 
+    def provide_copy(self):
+        return Practice(self.match_service)
+
     def initialize(self, match_service, subsequent_load=False):
         self.match_service = match_service
         if subsequent_load:
