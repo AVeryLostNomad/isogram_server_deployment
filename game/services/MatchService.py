@@ -14,6 +14,7 @@ class MatchService:
 
         self.match_id = self.isogram_server.get_stat_service().get_highest_game_id()
 
+        print("Initializing the match service match_types list")
         self.match_types = {
             "practice": Practice(self),
            # "head2head": SimpleHead2Head(self)
@@ -56,7 +57,7 @@ class MatchService:
             print("Need to find a match")
 
             # New match loop
-            for match_type in sorted_matches:
+            for match_type in [str(x) for x in sorted_matches]:
                 print(match_type, "Type")
                 # This is the most preferred match type for this player
                 # Let's see if they can do it and/or if we can find someone else to do it with them.
