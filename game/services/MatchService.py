@@ -64,8 +64,12 @@ class MatchService:
                 # This is the most preferred match type for this player
                 # Let's see if they can do it and/or if we can find someone else to do it with them.
                 print('Match types has that? ', self.match_types.has_key(match_type))
-                cl_template = getattr(importlib.import_module("game.modes"), self.match_types[match_type].get_name())
-                game_setup = cl_template(self)
+                try:
+                    cl_template = getattr(importlib.import_module("game.modes"), self.match_types[match_type].get_name())
+                    game_setup = cl_template(self)
+                except Exception, e:
+                    print(e)
+                    print("There was an exception")
                 # Maybe is an instance copy of the type of game-mode we want to play?
                 print("Copy done")
 
