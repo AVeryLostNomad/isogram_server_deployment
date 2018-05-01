@@ -62,12 +62,13 @@ class MatchService:
                 # Let's see if they can do it and/or if we can find someone else to do it with them.
                 game_setup = copy.deepcopy(self.match_types[match_type])
                 # Maybe is an instance copy of the type of game-mode we want to play?
+                print("Copy done")
 
                 if not game_setup.is_suitable_player(pid):
                     print("Not suitable")
                     continue
                 # This match type works for this player, can we find other ones that it works for?
-
+                print("After that")
                 temp_players = []
 
                 temp_players.append(pid)
