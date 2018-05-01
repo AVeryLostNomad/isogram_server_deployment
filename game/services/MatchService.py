@@ -270,9 +270,9 @@ class MatchService:
                         total_games_by_size = player.get_total_games_by_size()
                         total_moves_by_size = player.get_total_moves_by_size()
 
-                        total_time_dict[str(n_gram_size)] += time_spent
-                        total_games_by_size[str(n_gram_size)] += 1
-                        total_moves_by_size[str(n_gram_size)] += moves
+                        total_time_dict[n_gram_size] += time_spent
+                        total_games_by_size[n_gram_size] += 1
+                        total_moves_by_size[n_gram_size] += moves
 
                         player.set_total_play_time_by_size(total_time_dict)
                         player.set_total_games_by_size(total_games_by_size)
