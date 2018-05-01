@@ -110,7 +110,11 @@ class MatchService:
                 if str(pid) in self.guesstimated_wait_times.keys():
                     self.guesstimated_wait_times.pop(str(pid))
 
-                game_setup = game_setup.provide_copy().initialize(self.isogram_server.get_match_service(), subsequent_load=True)
+                copy = game_setup.provide_copy()
+                print("Copy nulll? ", copy == None, type(copy))
+                game_setup = copy.initialize(self.isogram_server.get_match_service(), subsequent_load=True)
+                print("Copy nulll Two?? ", copy == None, type(copy))
+
 
                 for player_id in temp_players:
                     print("Adding this player")
